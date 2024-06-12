@@ -13,11 +13,12 @@ public class Dev {
     /* pela herança, podemos trabalhar com cursos e mentorias */
     
     public void inscreverBootcamp(Bootcamp bootcamp){
-
+        this.conteudosInscritos.addAll(bootcamp.getConteudos());
+        /* adiciona todos os conteúdos do bootcamp no Set */
     }
 
     public void progredir(){
-
+        
     }
 
     public void calcularTotalXp(){
