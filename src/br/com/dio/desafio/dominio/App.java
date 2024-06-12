@@ -16,6 +16,9 @@ public class App {
         curso2.setCargaHoraria(8);  
         System.out.println(curso2);
 
+        Conteudo conteudo = new Curso();/* com polimorfismo posso instanciar
+                                    Conteudo mais a partir de curso */
+
         Mentoria mentoria1 = new Mentoria();
         mentoria1.setTitulo("Mentoria de Java");
         mentoria1.setDescricao("mentoria de java com Spring Boot");
