@@ -1,6 +1,7 @@
 package br.com.dio.desafio.dominio;
 
 import java.util.LinkedHashSet;
+import java.util.Optional;
 import java.util.Set;
 
 public class Dev {
@@ -15,14 +16,25 @@ public class Dev {
     public void inscreverBootcamp(Bootcamp bootcamp){
         this.conteudosInscritos.addAll(bootcamp.getConteudos());
         /* adiciona todos os conteúdos do bootcamp no Set */
+        bootcamp.getDevsInscritos().add(this);/* no Set de inscritos passa o dev (this) */
     }
 
     public void progredir(){
-        
+        /* pegar dos conteudos inscritos e jogar em concluidos */
+        Optional<Conteudo> conteudoConferido = this.conteudosInscritos.stream().findFirst();
+        /* Optinal resolve problema com retornos null  Optin(null)al */
+        if (conteudoConferido.isPresent()) { /* se existe dentro da lista */
+            this.conteudosConcluidos.add(conteudoConferido.get());// recebe conteudo mesmo
+            this.conteudosInscritos.remove(conteudoConferido.get());
+        }else{
+            System.out.println("Você não está matriculado em nenhum conteúdo!");
+        }
     }
 
-    public void calcularTotalXp(){
-
+    public double calcularTotalXp(){
+        return this.conteudosConcluidos.stream()
+        .mapToDouble(Conteudo::calcularXp).sum();  /* conteudo -> conteudo.calcularXp()) */
+        /* pega cada conteudo de dentro do Set, e cada conteúdo , e soma */
     }
 
     public String getNome() {
