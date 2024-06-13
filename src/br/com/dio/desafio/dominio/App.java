@@ -43,16 +43,20 @@ public class App {
         System.out.println("-");
         System.out.println("Conteúdos inscritos Camila "+devCamila.getConteudosInscritos());
         System.out.println("Conteúdos concluidos Camila "+devCamila.getConteudosConcluidos());
+        System.out.println("XP: "+ devCamila.calcularTotalXp());
+
                 System.out.println("----------");
+
         Dev devWalber = new Dev();
         devWalber.setNome("Walber");
         devWalber.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos inscritos Walber "+devWalber.getConteudosInscritos());
         devWalber.progredir();
+        devWalber.progredir();
         System.out.println("-");
         System.out.println("Conteúdos inscritos Walber "+devWalber.getConteudosInscritos());
         System.out.println("Conteúdos concluidos Walber "+devWalber.getConteudosConcluidos());
-
+        System.out.println("XP: "+ devWalber.calcularTotalXp());
 
     }
 }
