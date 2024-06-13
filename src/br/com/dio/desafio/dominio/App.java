@@ -40,6 +40,8 @@ public class App {
         System.out.println("Conteúdos inscritos Camila "+devCamila.getConteudosInscritos());
 
         devCamila.progredir();// concluiu um conteúdo
+        devCamila.progredir();
+        devCamila.progredir();
         System.out.println("-");
         System.out.println("Conteúdos inscritos Camila "+devCamila.getConteudosInscritos());
         System.out.println("Conteúdos concluidos Camila "+devCamila.getConteudosConcluidos());
