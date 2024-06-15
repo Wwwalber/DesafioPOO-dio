@@ -3,6 +3,7 @@ package br.com.dio.desafio.dominio;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Bootcamp {
@@ -14,6 +15,17 @@ public class Bootcamp {
     private Set<Dev> devsInscritos = new HashSet<>();// ordem irrelevante, por isso HashSet
     private Set<Conteudo> conteudos = new LinkedHashSet<>();// ordem de inserção é importante
     
+    public void cadastrarBootcamp(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Dê um nome para o Bootcamp: ");
+        this.nome = scanner.nextLine();
+        System.out.println("Dê uma descrição para o Bootcamp: ");
+        this.descricao = scanner.nextLine();
+        System.out.println("Bootcamp "+ this.nome +" cadastrado com sucesso!\n"+
+        this.descricao);
+        scanner.close();
+    }
+
     public String getNome() {
         return nome;
     }

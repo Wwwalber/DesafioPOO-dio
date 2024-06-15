@@ -4,12 +4,13 @@ import java.time.LocalDate;
 
 public class App {
     public static void main(String[] args) throws Exception {
+      
         Curso curso1 = new Curso();
         curso1.setTitulo("Cursos Java");
         curso1.setDescricao("Descrição do curso de Java.");
         curso1.setCargaHoraria(8);    
         System.out.println(curso1);
-        
+      
         Curso curso2 = new Curso();
         curso2.setTitulo("Curso de JavaScript");
         curso2.setDescricao("Descrição do curso de Java.");
@@ -59,6 +60,10 @@ public class App {
         System.out.println("Conteúdos inscritos Walber "+devWalber.getConteudosInscritos());
         System.out.println("Conteúdos concluidos Walber "+devWalber.getConteudosConcluidos());
         System.out.println("XP: "+ devWalber.calcularTotalXp());
+        
+            System.out.println("----------");
+        Bootcamp bootcamp3 = new Bootcamp();
+        bootcamp3.cadastrarBootcamp();
 
     }
 }
