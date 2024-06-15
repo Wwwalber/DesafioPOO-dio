@@ -6,13 +6,15 @@ public abstract class Conteudo {
     /* static - posso acessar fora da classe 
      * protected - filhos de conteúdo terão acesso
     */
-    private String titulo;
-    private String descricao;
+    protected String titulo;
+    protected String descricao;
 
     /* obrigar os filhos a implementar */
     public abstract double calcularXp();/*  
                 causa de a classe ter de ser abstrata
                 não pode ser instanciada */
+
+    public abstract void cadastrarConteudo();
 
     public String getTitulo() {
         return titulo;
