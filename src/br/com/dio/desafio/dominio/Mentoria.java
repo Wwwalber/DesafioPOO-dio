@@ -26,4 +26,10 @@ public class Mentoria extends Conteudo {
         ", \ndescricao=" + getDescricao() + ", \ndata=" +
          data + "]";
     }
+
+    @Override
+    public void cadastrarConteudo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'cadastrarConteudo'");
+    }
 }

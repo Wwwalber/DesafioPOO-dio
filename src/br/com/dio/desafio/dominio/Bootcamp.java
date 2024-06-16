@@ -21,7 +21,7 @@ public class Bootcamp {
         this.nome = scanner.nextLine();
         System.out.println("Dê uma descrição para o Bootcamp: ");
         this.descricao = scanner.nextLine();
-        System.out.println("Bootcamp "+ this.nome +" cadastrado com sucesso!\n"+
+        System.out.println("Bootcamp "+ this.nome +" cadastrado com sucesso!\n Descrito como"+
         this.descricao);
         scanner.close();
     }
