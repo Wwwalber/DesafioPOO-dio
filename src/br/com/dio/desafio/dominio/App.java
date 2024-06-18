@@ -27,7 +27,6 @@ public class App {
         System.out.println(mentoria1);
 
         /* instanciar um bootcamp */
-
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Bootcamp Java Developer");
         bootcamp.setDescricao("Descrição do Bootcamp Java Developer");
@@ -60,13 +59,10 @@ public class App {
         System.out.println("Conteúdos inscritos Walber "+devWalber.getConteudosInscritos());
         System.out.println("Conteúdos concluidos Walber "+devWalber.getConteudosConcluidos());
         System.out.println("XP: "+ devWalber.calcularTotalXp());
-         
+        
             System.out.println("----------");
         Bootcamp bootcamp3 = new Bootcamp();
         bootcamp3.cadastrarBootcamp();
-
-        Curso curso3 = new Curso();
-        curso3.cadastrarConteudo();
 
     }
 }
